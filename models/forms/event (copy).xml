@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+
+        <field name="id" type="hidden" default="0" label="COM_EVENT_MANAGE_FORM_LBL_EVENT_ID"
+            readonly="true" class="readonly"            
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_EVENT_MANAGE_FORM_LBL_EVENT_CREATED_BY"
+            description="COM_EVENT_MANAGE_FORM_DESC_EVENT_CREATED_BY"  /> 
+
+       <field name="insurencename" type="text" default=""               
+            label="Name of Insured"
+            description="name of insured"   
+            required="true"             
+                 />
+
+	<field name="activity" type="checkboxes" label="Activity" multiple="true" default="none" required="true">
+                <option value="1">Acrobats</option>
+                <option value="2">Actors / Acting</option>
+                <option value="3">Aerialists</option>
+                <option value="4">Balloon Sculpting</option>
+                <option value="5">Band</option>
+                <option value="6">Baton Twirling</option>
+                <option value="7">Bingo Caller</option>
+                <option value="8">Bubble Blowing</option>
+                <option value="9">Burlesque Artist</option>
+                <option value="10">Buskers</option>
+                <option value="11">Caractures</option>
+                <option value="12">Cartoonists</option>
+                <option value="13">Characters</option>
+                <option value="14">Childrens Entertainers</option>
+                <option value="15">Clairvoyant</option>
+                <option value="16">Clown</option>
+                <option value="17">Comedians</option>
+                <option value="18">Comperes</option>
+                <option value="19">Costume Characters</option>
+                <option value="20">Escape Artists</option>
+                <option value="21">Face Body Painters</option>
+                <option value="22">Fire Performers</option>
+                <option value="23">Hula Hoop</option>
+                <option value="24">Impersonators</option>
+                <option value="25">Jugglers</option>
+                <option value="26">Karaoke Hosts</option>
+                <option value="27">Magicians</option>
+                <option value="28">Marriage Celebrants</option>
+                <option value="29">MC</option>
+                <option value="30">Mime</option>
+                <option value="31">Mobile DJ</option>
+                <option value="32">Mobile VJ</option>
+                <option value="33">Models</option>
+                <option value="34">Music Teacher</option>
+                <option value="35">Musicians</option>
+                <option value="36">Pavement Art</option>
+                <option value="37">Physical Theatre</option>
+                <option value="38">Plate Spinning</option>
+                <option value="39">Poets</option>
+                <option value="40">Promotional Staff</option>
+                <option value="41">Public Speakers</option>
+                <option value="42">Puppetry</option>
+                <option value="43">Race Callers</option>
+                <option value="44">Singer</option>
+                <option value="45">Solo Performer</option>
+                <option value="46">Spruiker</option>
+                <option value="47">Stage Hypnotist (not on cruiseships)</option>
+                <option value="48">Statues</option>
+                <option value="49">Stilt Walkers</option>
+                <option value="50">Storytellers</option>
+                <option value="51">Street Theatre Performers</option>
+                <option value="52">Tarot Card Readers</option>
+                <option value="53">Temporary Tattoos</option>
+                <option value="54">Theatre Performers</option>
+                <option value="55">Trivia Hosts</option>
+                <option value="56">TV Presenters</option>
+                <option value="57">Unicycling</option>
+        </field>
+
+        <field name="perfomers" type="list" default="" label="Number of Performers" description="Number of Performers" required="true"> 
+            <option value="1">Individual Performers</option> 
+            <option value="2">Duo Performing Groups</option>
+            <option value="3-5">3-5 Member Performance Groups</option>
+            <option value="6-8">6-8 Member Performance Groups</option>
+            <option value="9-12">9-12 Member Performance Groups</option>
+            <option value="13+">Referral</option>
+        </field>
+
+        <field name="annualincome" type="list" default="" label="Estimated Annual Income" description="Estimated Annual Income" required="true" > 
+            <option value="1">$0 - $50,000</option>
+            <option value="2">$50,000 - $100,000</option>
+            <option value="3">$100,000 - $150,000</option>
+            <option value="4">$150,000 - $250,000</option>
+            <option value="5">$250,000 +</option>
+        </field>
+
+
+       <field name="postcode" type="text" default=""               
+            label="Postcode"
+            description="Postcode"   
+            required="true"             
+                 />
+
+        <field name="email" type="text" default=""               
+            label="Email Address"
+            description="Email Address"   
+            required="true"             
+                 />
+
+        <field name="confirmemail" 
+            type="text" 
+            default="" 
+            label="Confirm Email Address"
+            description="Confirm Email Address" 
+            class="validate-email" 
+            validate="equals" 
+            field="email" 
+            required="true"/>
+
+       <field name="start_date" type="calendar"                
+            label="COM_EVENT_MANAGE_FORM_LBL_EVENT_START_DATE"
+            description="COM_EVENT_MANAGE_FORM_DESC_START_DATE" 
+            required="true"             
+                 />
+
+        <field name="liailitycover" type="list" default="" label="Public Liaility Cover" description="Public Liaility Cover" required="true"> 
+              <option value="">Please Select</option>
+              <option value="1">$20000000</option>
+        </field>
+
+        <field name="next" type="submit" 
+            value= "NEXT"                           
+            description="COM_EVENT_MANAGE_FORM_DESC_EVENT_NEXT" 
+                 />
+                         
+        <field
+            name="state"
+            type="list"
+            label="JSTATUS"
+            description="JFIELD_PUBLISHED_DESC"
+            class="inputbox"
+            size="1"
+            default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASHED</option>
+        </field> 
+    
+    </fieldset>
+
+</form>

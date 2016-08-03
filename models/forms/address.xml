@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+
+        <field name="id" type="hidden" default="0" label="COM_EVENT_MANAGE_FORM_LBL_EVENT_ID"
+            readonly="true" class="readonly"            
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_EVENT_MANAGE_FORM_LBL_EVENT_CREATED_BY"
+            description="COM_EVENT_MANAGE_FORM_DESC_EVENT_CREATED_BY"  /> 
+
+        <field name="firstname" type="text" label="First Name" description="Policy Owner first name" required="true"/>
+
+        <field name="lastname" type="text" label="Last Name" description="Policy Owner last name" required="true"/>
+
+        <field name="insuredname" type="text" label="Name of Insured" description="Name of Insured" required="true"/>
+
+        <field name="streetaddress1" type="text" label="Street Address 1" description="Street Address" required="true"/>
+
+        <field name="streetaddress2" type="text" label="Street Address 2" description="Street Address" required=""/>
+
+        <field name="suburb" type="text" label="Suburb" description="Suburb" required="true"/>
+
+        <field name="state" type="sql" default="" label="State/Territory" description="Select State/Territory" 
+                query="SELECT id,name FROM #__state a WHERE a.state=1 AND a.countryid=15" key_field="id" value_field="name" required="true" />
+
+        <field name="postcode" type="text" label="Postcode" description="Postcode" required="true"/>
+
+        <field name="phone" type="text" default="" maxlength="12" class="validate-numeric" label="Phone Number" description="Phone Number" required="true"/>
+
+         <field name="sameaddress" type="checkboxes" default="" label="Billing Address same as Policy Address" description="Billing Address same as Policy Address">
+            <option value="Y">Yes</option>
+            <!-- <option value="N">No</option> -->
+        </field>
+
+        <field name="billingaddress1" type="text" label="Street Address 1" description="Street Address 1" required="true"/>
+
+        <field name="billingaddress2" type="text" label="Street Address 2" description="Street Address 2" required=""/>
+
+        <field name="billingsuburb" type="text" label="Suburb" description="Suburb" required="true"/>
+
+        <field name="billingstate" type="sql" default="" label="State/Territory" description="Select State/Territory" 
+                query="SELECT id,name FROM #__state a WHERE a.state=1 AND a.countryid=15" key_field="id" value_field="name" required="true" />
+
+        <field name="billingpostcode" type="text" label="Postcode" description="Postcode" required="true"/>
+<!-- 
+        <field name="email" type="text" label="Email Address" description="Email Address" class="validate-email" 
+            validate="email" required=""/> -->
+
+        <!-- <field name="confirmemail" type="text" default=""               
+            label="Confirm Email Address"
+            description="Confirm Email Address" class="validate-email" validate="equals" field="email" required=""/> -->
+
+        <field name="next" type="submit" 
+            value= "NEXT"                           
+            description="COM_EVENT_MANAGE_FORM_DESC_EVENT_NEXT" />
+                         
+        <field
+            name="state"
+            type="list"
+            label="JSTATUS"
+            description="JFIELD_PUBLISHED_DESC"
+            class="inputbox"
+            size="1"
+            default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASHED</option>
+        </field> 
+    
+    </fieldset>
+
+</form>
